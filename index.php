@@ -19,6 +19,11 @@
 
     <div class="main">
 
+        <div class="search">
+            <input type="text" class="form-control" placeholder="Enter player's name..." id="i-search">
+        </div>
+
+
         <div class="table-div">
 
             <table class="table text-center">

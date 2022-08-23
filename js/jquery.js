@@ -1,5 +1,6 @@
 $(function () {
     sort();
+    search();
 });
 
 function sort() {
@@ -39,4 +40,28 @@ function sort() {
         })
 
     })
-} 
+}
+
+
+function search() {
+
+    $(document).on('keyup', '#i-search', function () {
+
+        $.ajax({
+            url: 'search.php',
+            method: 'post',
+            data: { ime: this.value },
+
+            success: function (searchResult) {
+                $('tbody').html(searchResult);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        })
+
+    });
+
+
+}
