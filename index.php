@@ -30,7 +30,11 @@
                         <th>Godine</th>
                         <th>Broj na dresu</th>
                         <th>Klub</th>
-                        <th>Broj golova</th>
+                        <th>
+                            Broj golova
+                            <i class="fa-solid fa-arrow-up mx-1" id="rastuce" value="asc"></i>
+                            <i class="fa-solid fa-arrow-down" id="opadajuce" value="desc"></i>
+                        </th>
                     </tr>
                 </thead>
 
@@ -38,10 +42,13 @@
                 $db_connection = new mysqli("localhost", "root", "", "premijerliga");
                 $query = "SELECT fudbaler.id, fudbaler.ime, fudbaler.prezime, fudbaler.godine, fudbaler.broj_dres, klub.ime as kime, fudbaler.broj_golova FROM fudbaler JOIN klub ON fudbaler.klub_id = klub.id";
                 $data = $db_connection->query($query);
-
-                while ($row = mysqli_fetch_array($data)) :
                 ?>
-                    <tbody>
+
+                <tbody>
+                    <?php
+                    while ($row = mysqli_fetch_array($data)) :
+                    ?>
+
                         <tr>
                             <td><?php echo $row['ime'];  ?></td>
                             <td><?php echo $row['prezime'];  ?></td>
@@ -51,14 +58,16 @@
                             <td><?php echo $row['broj_golova']; ?></td>
                         </tr>
                     <?php
-                endwhile;
+                    endwhile;
                     ?>
-                    </tbody>
+                </tbody>
 
             </table>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
 </body>
 
 </html>
