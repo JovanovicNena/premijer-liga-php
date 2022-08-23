@@ -5,12 +5,11 @@
 
 .nav-div {
     background-color: #58bf74;
-    height: 60px;
+    height: 65px;
 }
 
 .nav-div a {
     text-decoration: none;
-    margin-left: 900px;
 }
 
 a:visited {
@@ -18,7 +17,34 @@ a:visited {
 }
 
 #home-link {
-    padding-top: 8px;
+    padding-top: 5px;
     font-size: 35px;
     color: black;
+    margin-left: 20px;
 } 
+
+ul {
+    display: flex;
+    list-style-type: none;
+     margin: 0;
+    padding: 0;
+}
+
+#button-new-player{
+    width: 100px;
+    margin-top: 12px;
+    margin-left: 15px;
+    font-size: 19px;
+}
+
+.table-div{
+    width: 900px;
+    margin-top: 30px;
+    margin-left: 530px;
+}
+
+#top-scorers{
+    margin-left: 530px;
+    margin-top: 10px;
+    font-size: 30px;
+}
