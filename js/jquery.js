@@ -2,6 +2,7 @@ $(function () {
     sort();
     search();
     save();
+    deletePlayer();
 });
 
 function sort() {
@@ -84,6 +85,7 @@ function save() {
             },
             success: function () {
                 alert("New player added!");
+                window.history.back();
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
@@ -92,4 +94,26 @@ function save() {
         })
     })
 
+}
+
+function deletePlayer() {
+
+    $(document).on('click', '#delete_player', function () {
+
+        $.ajax({
+            url: 'delete.php',
+            method: 'post',
+            data: {
+                ID: $(this).attr('value')
+            },
+            success: function (data) {
+                alert("Player deleted!");
+                window.location.href = "index.php";
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        })
+    })
 }

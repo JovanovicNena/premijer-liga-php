@@ -40,6 +40,7 @@
                             <i class="fa-solid fa-arrow-up mx-1" id="rastuce" value="asc"></i>
                             <i class="fa-solid fa-arrow-down" id="opadajuce" value="desc"></i>
                         </th>
+                        <th></th>
                     </tr>
                 </thead>
 
@@ -61,6 +62,7 @@
                             <td><?php echo $row['broj_dres']; ?></td>
                             <td><?php echo $row['kime']; ?></td>
                             <td><?php echo $row['broj_golova']; ?></td>
+                            <td><i class="fa-regular fa-trash-can" id="delete_player" value="<?php echo $row['id']; ?>"></i></td>
                         </tr>
                     <?php
                     endwhile;
