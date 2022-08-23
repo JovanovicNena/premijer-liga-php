@@ -60,13 +60,19 @@
                 ?>
             </div>
 
+            <div class="form">
+                <label>Broj golova: </label>
+                <input type="number" class="form-control" id="broj_golova">
+            </div>
+
             <button type="button" id="button-save-player" class="btn btn-dark">Save</button>
 
         </div>
 
 
 
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="../js/jquery.js"></script>
 </body>
 
 </html>

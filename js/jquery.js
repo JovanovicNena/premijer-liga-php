@@ -1,6 +1,7 @@
 $(function () {
     sort();
     search();
+    save();
 });
 
 function sort() {
@@ -63,5 +64,32 @@ function search() {
 
     });
 
+
+}
+
+function save() {
+
+    $(document).on('click', '#button-save-player', function () {
+
+        $.ajax({
+            url: '../save.php',
+            method: 'post',
+            data: {
+                ime: $('#ime').val(),
+                prezime: $('#prezime').val(),
+                godine: $('#godine').val(),
+                broj: $('#broj').val(),
+                klub: $('#klub').val(),
+                broj_golova: $('#broj_golova').val()
+            },
+            success: function () {
+                alert("New player added!");
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        })
+    })
 
 }
