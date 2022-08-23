@@ -6,9 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premijer liga - Lista strelaca</title>
+    <link rel="stylesheet" href="css/css.css">
 </head>
 
 <body>
+
+    <?php
+    require 'navmenu.html';
+    ?>
 
     <div class="main">
 

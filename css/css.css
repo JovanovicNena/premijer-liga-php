@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-div {
+    background-color: #58bf74;
+    height: 60px;
+}
+
+.nav-div a {
+    text-decoration: none;
+    margin-left: 900px;
+}
+
+a:visited {
+    color: black;
+}
+
+#home-link {
+    padding-top: 8px;
+    font-size: 35px;
+    color: black;
+} 
