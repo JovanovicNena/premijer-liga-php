@@ -18,6 +18,7 @@ while ($row = mysqli_fetch_array($data)) :
         <td><?php echo $row['broj_dres']; ?></td>
         <td><?php echo $row['kime']; ?></td>
         <td><?php echo $row['broj_golova']; ?></td>
+        <td><i class="fa-regular fa-trash-can" id="delete_player" value="<?php echo $row['id']; ?>"></i></td>
     </tr>
 
 <?php endwhile; ?>

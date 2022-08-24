@@ -3,6 +3,7 @@ $(function () {
     search();
     save();
     deletePlayer();
+    update();
 });
 
 function sort() {
@@ -85,7 +86,7 @@ function save() {
             },
             success: function () {
                 alert("New player added!");
-                window.history.back();
+                window.location.href = "../index.php";
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
@@ -115,5 +116,36 @@ function deletePlayer() {
                 alert(thrownError);
             }
         })
+    })
+}
+
+
+function update() {
+
+    $(document).on('click', '#button-update-player', function () {
+
+        $.ajax({
+            url: '../update.php',
+            method: 'post',
+            data: {
+                ime: $('#ime').val(),
+                prezime: $('#prezime').val(),
+                godine: $('#godine').val(),
+                broj: $('#broj').val(),
+                klub: $('#klub').val(),
+                broj_golova: $('#broj_golova').val(),
+                id: $(this).attr('value')
+            },
+            success: function (data) {
+                alert("Player updated!");
+                window.location.href = "../index.php";
+
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        })
+
     })
 }

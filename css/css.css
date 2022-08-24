@@ -62,7 +62,7 @@ ul {
     margin-left: 30px;
 }
 
-#button-save-player{
+#button-save-player, #button-update-player {
     width: 250px;
     margin-top: 20px;
     margin-left: 280px;
