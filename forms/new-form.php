@@ -31,11 +31,11 @@
             </div>
             <div class="form">
                 <label>Godine: </label>
-                <input type="text" class="form-control" id="godine">
+                <input type="number" class="form-control" id="godine">
             </div>
             <div class="form">
                 <label>Broj: </label>
-                <input type="text" class="form-control" id="broj">
+                <input type="number" class="form-control" id="broj">
             </div>
 
             <?php
